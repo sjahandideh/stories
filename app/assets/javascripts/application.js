@@ -10,7 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require jquery/dist/jquery
+//= require jquery-ujs/src/rails
+//= require angular/angular
+//= require angular-route/angular-route
+//= require bootstrap-sass/assets/javascripts/bootstrap
 //= require_tree .
