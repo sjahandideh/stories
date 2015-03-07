@@ -18,5 +18,6 @@ group :development, :test do
   gem 'spring'
   gem 'pry'
   gem 'rspec-rails', '~> 3.0'
+  gem 'dotenv-rails'
 end
 
