@@ -3,28 +3,37 @@
 /* move special fonts to HTML head for better performance */
 @import url(http://fonts.googleapis.com/css?family=Voltaire);
 
+/* use special fonts in certain elements */
+@mixin text-default() {
+  text-transform: uppercase;
+  font-family: 'Voltaire',Arial,sans-serif;
+  letter-spacing: 2px;
+}
+
+@mixin social-nav() {
+  li {
+    margin-right: 20px;
+  }
+}
+
 html, body {
   height: 100%;
   width: 100%;
   font-family: Arial,sans-serif;
-  background-color: black;
+  background-color: #DBDBDB;
+  font-size: 16px;
 }
 
-li {
-}
 /* fix bs3 horizontal scrollbar bug */
 
 .row {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 }
 
-/* use special fonts in certain elements */
-
-h1, h2, h3, h4, .lead, .btn, .navbar a {
-  text-transform: uppercase;
-  font-family: 'Voltaire',Arial,sans-serif;
-  letter-spacing: 2px;
+h1, h2, h3, h4, .lead, .btn {
+  @include text-default();
 }
 
 h1 {
@@ -46,19 +55,21 @@ img.grayscale {
   background-color: #fff;
 }
 
-.scroll-down a, .scroll-top a {
-  color: #ffffff;
-}
-
 .scroll-down {
   position: fixed;
   bottom: 20%;
   right: 0%;
   color: #f9f9f9;
+  a {
+    color: #ffffff;
+  }
 }
 
 .scroll-top {
   background-color: #dbdbdb;
+  a {
+    color: #ffffff;
+  }
 }
 
 .vert {
@@ -80,15 +91,31 @@ img.grayscale {
   }
 }
 
-.navbar a {
-  color: #fff;
-  font-size: 14px;
+.navbar {
+  a {
+    text-transform: uppercase;
+    font-family: 'Voltaire',Arial,sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 14px;
+  }
+  &.alt {
+    background-color: #ccc;
+    .lead {
+      color: #d6d6d6;
+    }
+    &.affix {
+      background-color: #d6d6d6;
+    }
+    li {
+      a:hover, &.active {
+        background-color: #d6d6d6;
+      }
+    }
+  }
 }
 
 .navbar-bold {
-  &.affix {
-    background-color: #d46054;
-  }
   background-color: #f68076;
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   li {
@@ -96,9 +123,14 @@ img.grayscale {
       background-color: #d46054;
     }
   }
+  &.affix {
+    background-color: #d46054;
+  }
 }
 
 .header {
+  height: 80%;
+  background: #f68076 url('http://www.bootply.com/assets/example/pt_topo_l.png') repeat center center fixed;
   h1 {
     font-size: 80px;
     /*-webkit-text-stroke: 1px rgba(f, f, f, 0.1);*/
@@ -112,47 +144,30 @@ img.grayscale {
     color: #d46054;
     font-size: 25px;
   }
-  height: 80%;
-  background: #f68076 url('http://www.bootply.com/assets/example/pt_topo_l.png') repeat center center fixed;
 }
 
 /* use alt in navbar and header for different color */
+/*.alt {*/
+  /*background-color: #6E28C9;*/
+  /*.lead {*/
+    /*color: #3B0496;*/
+  /*}*/
+  /*&.affix {*/
+    /*background-color: #4C06AB;*/
+  /*}*/
+  /*li {*/
+    /*a:hover, &.active {*/
+      /*background-color: #5D17BA;*/
+    /*}*/
+  /*}*/
+/*}*/
 
-.alt {
-  background-color: #6E28C9;
-  .lead {
-    color: #3B0496;
-  }
-  &.affix {
-    background-color: #4C06AB;
-  }
-  li {
-    a:hover, &.active {
-      background-color: #5D17BA;
-    }
-  }
-}
-
-.navbar {
-  background-color: #d3d3d3;
-  .lead {
-    color: #a9a9a9;
-  }
-  &.affix {
-    background-color: #a9a9a9;
-  }
-  li {
-    a:hover, &.active {
-      background-color: #a9a9a9;
-    }
-  }
-}
-
-.blurb {
+.stories {
   padding: 120px 0;
   background-color: #fefefe;
   .panel {
     background-color: transparent;
+    .row { height: 130px; }
   }
 }
 
@@ -185,7 +200,7 @@ img.grayscale {
   }
 }
 
-.callout {
+.my-story {
   color: #ffffff;
   padding-top: 7%;
   height: 100%;
@@ -195,6 +210,9 @@ img.grayscale {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  ul.nav {
+    @include social-nav();
+  }
 }
 
 .gallery {

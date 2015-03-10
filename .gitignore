@@ -32,3 +32,4 @@ bower.json
 node_modules
 vendor/assets/bower_components
 .sass-cache/
+**.DS_Store
