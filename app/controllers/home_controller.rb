@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-    #render text: '', layout: 'application'
+  end
+
+  def angular
+    render text: '', layout: 'application'
   end
 end

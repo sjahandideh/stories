@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   # UI routes
-  get 'about' => 'home#index'
+  get 'home' => 'home#angular'
+  get 'about' => 'home#angular'
 
   # Api routes
   api_version( :module   => "Api::V1",
