@@ -26,7 +26,10 @@ module Stories
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.assets.paths << Rails.root.join("app", "assets", "templates")
+    #config.assets.paths << Rails.root.join("app", "assets", "angular")
+    Dir.glob("#{Rails.root}/app/assets/angular/**/").each do |path|
+      config.assets.paths << path
+    end
     config.assets.precompile += %w( .svg .eot .woff .ttf )
     #config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
     # config.i18n.default_locale = :de
