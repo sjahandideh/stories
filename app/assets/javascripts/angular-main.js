@@ -9,11 +9,11 @@ Stories.App.config(['$routeProvider', '$locationProvider', function(routeProvide
 
   routeProvider
     .when("/about", {
-      templateUrl: '../templates/about.html',
+      templateUrl: '/assets/about.html',
       controller: 'AboutCtrl'
     })
     .otherwise({
-      templateUrl: '../templates/home.html',
+      templateUrl: '/assets/home.html',
       controller: 'HomeCtrl'
     });
 }]);
