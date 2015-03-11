@@ -1,0 +1,17 @@
+/* -- dashboard -- */
+
+#read-dashboard {
+  padding: 65px 0;
+
+  .thumbnail {
+    margin: 18px;
+    display: inline-block;
+    height: 500px;
+    overflow: hidden;
+    padding: 10px;
+    img {
+      height: 260px;
+      opacity: 0.6;
+    }
+  }
+}
