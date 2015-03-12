@@ -16,6 +16,8 @@ gem 'versionist'
 
 group :development, :test do
   gem 'rake'
+  gem 'capybara'
+  gem "teaspoon"
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
