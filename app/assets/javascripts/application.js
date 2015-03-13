@@ -12,8 +12,10 @@
 //
 //= require jquery/dist/jquery
 //= require jquery-ujs/src/rails
+//= require underscore/underscore-min
 //= require angular/angular
 //= require angular-route/angular-route
+//= require restangular/dist/restangular
 //= require bootstrap-sass/assets/javascripts/bootstrap
 //
 //= require_tree .
