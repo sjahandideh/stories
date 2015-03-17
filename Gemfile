@@ -13,6 +13,7 @@ gem 'bower-rails'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'versionist'
+gem 'github-markup'
 
 group :development, :test do
   gem 'rake'

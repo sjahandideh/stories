@@ -3,6 +3,10 @@ Stories.App.config(['$routeProvider', '$locationProvider', function(routeProvide
   locationProvider.html5Mode({enabled:true, requireBase: false});
 
   routeProvider
+    .when("/books/:id", {
+      templateUrl: '/assets/read/book.html',
+      controller: 'read/bookCtrl'
+    })
     .when("/read", {
       templateUrl: '/assets/read/dashboard.html',
       controller: 'read/dashboardCtrl'

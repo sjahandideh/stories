@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home',  to: 'home#angular'
   get 'read',  to: 'home#angular'
   get 'write', to: 'home#angular'
+  get 'books/:id', to: 'home#angular'
 
   # Api routes
   api_version( :module   => "Api::V1",
