@@ -15,6 +15,7 @@
 //= require underscore/underscore-min
 //= require angular/angular
 //= require angular-route/angular-route
+//= require angular-sanitize/angular-sanitize.min
 //= require restangular/dist/restangular
 //= require bootstrap-sass/assets/javascripts/bootstrap
 //

@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   get 'books/:id', to: 'home#angular'
 
   # Api routes
-  api_version( :module   => "Api::V1",
-               :header   => { :name => "Accept", :value => "application/vnd.stories.com; version=1" },
-               :defaults => { :format => :json },
-               :default  => true) do
+  api_version( module: "Api::V1",
+               path:   {:value => "api/v1"}) do
 
     resources :books
   end

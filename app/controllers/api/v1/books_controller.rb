@@ -9,9 +9,7 @@ class Api::V1::BooksController < ApplicationController
   def show
     book = Book.find params[:id]
 
-    #require 'github/markup'
-    #GitHub::Markup.render(file, File.read())
-
-    render json: book.to_json
+    render json: book.to_json(include: :chapters)
   end
+
 end

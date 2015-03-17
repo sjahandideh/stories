@@ -1,9 +1,10 @@
 $background-offwhite: #F3F3F3;
 $background-white: #f8f8f8;
+$icon-bookmark: "\f097";
 
 @mixin main-container() {
   padding: 50px 0;
-  background-color: #F3F3F3;
+  background-color: $background-offwhite;
 }
 
 /* -- dashboard -- */
@@ -53,14 +54,15 @@ $background-white: #f8f8f8;
               background-color: transparent;
             }
           }
-        }
-        li:before {
-          font-family: FontAwesome;
-          content: "\f097";
-          font-size: 24px;
-          position: absolute;
-          top: 0;
-          left: 8px;
+          a:before {
+            background-color: transparent;
+            font-family: FontAwesome;
+            content: $icon-bookmark;
+            font-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 8px;
+          }
         }
       }
     }

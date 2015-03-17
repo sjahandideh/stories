@@ -19,6 +19,7 @@
     "angular-route":         "*",
     "angular-animate":       "*",
     "angular-bootstrap":     "*",
+    "angular-sanitize":      "*",
     "animate.css":           "*",
     "restangular":           "*",
     "angular-ui-codemirror": "*"
