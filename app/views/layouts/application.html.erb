@@ -21,9 +21,20 @@
         </a>
       </div>
       <div class="navbar-collapse collapse" id="navbar">
-        <ul class="nav navbar-nav">
-          <li><a href="/">Section 1</a></li>
-        </ul>
+        <form class="navbar-form navbar-right">
+          <% if current_user %>
+            <span class="form-group">
+              (<%= current_user.name %>)
+            </span>
+            <span class="form-group">
+              <%= link_to "Sign out", signout_path, id: "sign_out", class: 'btn' %>
+            </span>
+          <% else %>
+            <span class="form-group">
+              <%= link_to "Sign in", "/auth/developer", id: "sign_in", class: 'btn' %>
+            </span>
+          <% end %>
+        </form>
       </div>
      </div>
   </div> <!-- navbar -->
