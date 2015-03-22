@@ -74,5 +74,10 @@ $icon-bookmark: "\f097";
 
   .chapter-view {
     padding: 20px 50px;
+    h1.title {
+      color: #ccc;
+      border-bottom: 1px dotted #ccc;
+      margin-bottom: 50px;
+    }
   }
 }

@@ -55,4 +55,26 @@ describe("read/bookCtrl", function() {
 
   });
 
+  describe("#updateRating", function() {
+
+    it("set rating to 1", function() {
+      scope.updateRating(1);
+
+      expect(scope.rating).eql(1);
+    });
+
+    it("set rating to 5", function() {
+      scope.updateRating(5);
+
+      expect(scope.rating).eql(5);
+    });
+
+    it("set rating to 5 at most", function() {
+      scope.updateRating(6);
+
+      expect(scope.rating).eql(6);
+    });
+
+  });
+
 });

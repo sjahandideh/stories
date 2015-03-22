@@ -9,8 +9,19 @@
   </div>
 
   <div class="col-md-10 col-sm-12 chapter-view text-justify">
-    <h1>{{currentChapter.title}}</h1>
+    <h1 class='title'>{{currentChapter.title}}</h1>
+
     <div class='body' ng-bind-html="currentChapter.body">
     </div>
+
+    <div class='well'>
+      <ul class='list-inline'>
+        <li>Rate this chapter: </li>
+        <a href='' ng-repeat='starNo in [1,2,3,4,5]' ng-click='updateRating(starNo)'>
+          <li class="fa fa-2x" ng-class="{'fa-star': rating >= starNo, 'fa-star-o': rating < starNo}"></li>
+        </a>
+      </ul>
+    </div>
+
   </div>
 </div>
