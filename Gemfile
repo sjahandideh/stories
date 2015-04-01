@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'versionist'
 gem 'github-markup'
 gem 'omniauth'
+gem "puma"
 
 group :development, :test do
   gem 'rake'
