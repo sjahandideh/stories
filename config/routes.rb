@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   api_version( module: "Api::V1",
                path:   {:value => "api/v1"}) do
 
-    resources :books
+    resources :books do
+      resources :chapters do
+        resource :rating
+      end
+    end
+
   end
 
   # OmniAuth Authentication

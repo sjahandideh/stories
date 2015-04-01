@@ -18,7 +18,7 @@
       <ul class='list-inline'>
         <li>Rate this chapter: </li>
         <a href='' ng-repeat='starNo in [1,2,3,4,5]' ng-click='updateRating(starNo)'>
-          <li class="fa fa-2x" ng-class="{'fa-star': rating >= starNo, 'fa-star-o': rating < starNo}"></li>
+          <li class="fa fa-2x" ng-class="{'fa-star': rating.value >= starNo, 'fa-star-o': rating.value < starNo}"></li>
         </a>
       </ul>
     </div>
