@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # OmniAuth Authentication
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure',            to: redirect('/'), via: [:get, :post]
+  match 'signout',                 to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
   # UI routes
   get 'home',  to: 'home#angular'
   get 'read',  to: 'home#angular'
@@ -18,11 +23,6 @@ Rails.application.routes.draw do
 
   end
 
-  # OmniAuth Authentication
-  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-  match 'auth/failure',            to: redirect('/'), via: [:get, :post]
-  match 'signout',                 to: 'sessions#destroy', as: 'signout', via: [:get, :post]
-
-  root 'home#index'
+  root 'home#angular'
 
 end

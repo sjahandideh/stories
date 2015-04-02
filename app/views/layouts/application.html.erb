@@ -27,11 +27,11 @@
               (<%= current_user.name %>)
             </span>
             <span class="form-group">
-              <%= link_to "Sign out", signout_path, id: "sign_out", class: 'btn' %>
+              <%= link_to "Sign out", signout_path, id: "sign_out", target: "_self", class: 'btn' %>
             </span>
           <% else %>
             <span class="form-group">
-              <%= link_to "Sign in", "/auth/developer", id: "sign_in", class: 'btn' %>
+              <%= link_to "Sign in", "/auth/developer", id: "sign_in", target: "_self", class: 'btn' %>
             </span>
           <% end %>
         </form>
@@ -40,6 +40,7 @@
   </div> <!-- navbar -->
 
   <div id='main' ng-view=''>
+    <%= yield %>
   </div>
 
 </body>
