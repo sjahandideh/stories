@@ -15,10 +15,10 @@ Rails.application.routes.draw do
   api_version( module: "Api::V1",
                path:   {:value => "api/v1"}) do
 
-    resources :books do
-      resources :chapters do
-        resource :rating
-      end
+    resource :user
+    resources :books
+    resources :chapters do
+      resource :rating
     end
 
   end

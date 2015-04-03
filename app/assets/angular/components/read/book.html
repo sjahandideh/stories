@@ -1,5 +1,6 @@
 <div id='read-book' class='row'>
   <div class="col-md-2 col-sm-12 text-center navbar-side">
+    <span>{{currentUser.name}}</span>
     <img src="/assets/books/{{book.icon_name}}" class="img-responsive img-thumbnail">
     <ul class="nav" id="book-menu" ng-repeat="chapter in book.chapters">
       <li>
