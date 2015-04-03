@@ -25,6 +25,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'dotenv-rails'
 end
