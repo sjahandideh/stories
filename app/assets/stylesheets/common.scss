@@ -1,0 +1,11 @@
+/* -- variables -- */
+$background-offwhite: #F3F3F3;
+$background-white: #f8f8f8;
+$icon-bookmark: "\f097";
+
+/* -- mixins -- */
+@mixin main-container() {
+  padding: 50px 0;
+  background-color: $background-offwhite;
+}
+

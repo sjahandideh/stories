@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
     resource :user
     resources :books
+    resources :my_books
     resources :chapters do
       resource :rating
     end

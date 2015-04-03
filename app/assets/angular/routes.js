@@ -7,6 +7,14 @@ Stories.App.config(['$routeProvider', '$locationProvider', function(routeProvide
       templateUrl: '/assets/read/book.html',
       controller: 'read/bookCtrl'
     })
+    .when("/my_books/:id", {
+      templateUrl: '/assets/write/book.html',
+      controller: 'write/bookCtrl'
+    })
+    .when("/my_books/new", {
+      templateUrl: '/assets/write/new_book.html',
+      controller: 'write/newBookCtrl'
+    })
     .when("/read", {
       templateUrl: '/assets/read/dashboard.html',
       controller: 'read/dashboardCtrl'

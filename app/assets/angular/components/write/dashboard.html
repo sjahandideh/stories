@@ -1,0 +1,63 @@
+<div id='write-dashboard' class='main-container'>
+  <div class="container">
+
+    <!-- Projects Row -->
+    <div class="row text-center">
+
+      <!-- Add a new book -->
+      <a href="/my_books/new">
+        <div class="thumbnail col-md-2">
+          <div class="caption">
+            <img class="new img-responsive img-rounded" src="/assets/book.png" alt="new book">
+            <!--<div class="fa fa-book fa-5x"/>-->
+            <h3>New Book</h3>
+          </div>
+        </div>
+      </a>
+
+      <!-- List existing books -->
+      <a href="/my_books/{{book.id}}" ng-repeat="book in books">
+        <div class="thumbnail col-md-2">
+          <img class="img-responsive img-rounded" src="/assets/books/{{book.icon_name}}" alt="{{book.title}}">
+          <div class="caption">
+            <h3>{{book.title}}</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Pagination -->
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li>
+                    <a href="#">«</a>
+                </li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">»</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+  </div>
+</div>
